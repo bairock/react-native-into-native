@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RNTest</string>
+    <string name="title_activity_my_react">MyReactActivity</string>
+</resources>
