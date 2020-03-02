@@ -14,9 +14,6 @@ import {
     Easing
 } from 'react-native'
 
-// import reactIcon from './assets/react.png'
-// import backIcon from './assets/back.png'
-
 const mainBackColor = '#282c34'
 
 const App = ({ nativeParameter }) => {
@@ -51,22 +48,19 @@ const App = ({ nativeParameter }) => {
                             }
                         }}
                     >
-                        <Image
-                            style={styles.backIcon}
-                            // source={backIcon}
-                            source={require('./assets/back.png')}
-                        />
+                        <Image style={styles.backIcon} source={require('./assets/back.png')} />
                     </TouchableOpacity>
                 </View>
                 <Animated.Image
                     style={[styles.reactIcon, { transform: [{ rotate: spin }] }]}
-                    // source={reactIcon}
                     source={require('./assets/react.png')}
                 />
                 <View>
                     <Text style={styles.title}>React Native Side</Text>
                     <Text style={styles.parameter}>Value from Native app:</Text>
-                    <Text style={styles.nativeParameter}>{nativeParameter ? nativeParameter : '-'}</Text>
+                    <Text style={styles.nativeParameter}>
+                        {nativeParameter ? nativeParameter : '-'}
+                    </Text>
                 </View>
             </View>
         </SafeAreaView>
