@@ -10,26 +10,43 @@ import UIKit
 import React
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var valueForReactNativeApp: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+        NativeModule.viewController = self
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     @IBAction func highScoreButtonTapped(sender : UIButton) {
-      NSLog("Hello")
-      let jsCodeLocation = URL(string: "http://localhost:8081/index.bundle?platform=ios")
-      let mockData:NSDictionary = ["nativeParameter": "String parameter from iOS Native code"]
+        print("Opening React Native App")
+        // Production JS bundle location path
+        let jsCodeLocation = Bundle.main.url(forResource: "main", withExtension: "jsbundle")!
+        
+        // Development JS bundle location url
+        // let jsCodeLocation = URL(string: "http://localhost:8081/index.bundle?platform=ios")
+        let textValueForRNApp = valueForReactNativeApp.text
+        let mockData:NSDictionary = ["nativeParameter": textValueForRNApp!]
 
-      let rootView = RCTRootView(
-          bundleURL: jsCodeLocation!,
-          moduleName: "RNTestScreen",
-          initialProperties: mockData as [NSObject : AnyObject],
-          launchOptions: nil
-      )
-      let vc = UIViewController()
-      vc.view = rootView
-      self.present(vc, animated: true, completion: nil)
+        let rootView = RCTRootView(
+            bundleURL: jsCodeLocation,
+            moduleName: "RNTestScreen",
+            initialProperties: mockData as [NSObject : AnyObject],
+            launchOptions: nil
+        )
+        let vc = UIViewController()
+        vc.view = rootView
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    func dismissReactNativeApp() {
+        self.dismiss(animated: true)
     }
 }
-

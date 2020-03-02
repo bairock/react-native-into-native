@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,25 +15,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfj-qX-2Ji">
-                                <rect key="frame" x="158" y="433" width="99" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Go to RN View"/>
-                                <connections>
-                                    <action selector="highScoreButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LD7-R3-xMK"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iOS Native View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wd-WX-qUQ">
-                                <rect key="frame" x="145" y="329" width="125" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Db-ZD-8ap">
+                                <rect key="frame" x="20" y="291.5" width="374" height="313"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptp-GL-m5h">
+                                        <rect key="frame" x="137.5" y="193" width="99" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="8eP-aP-qBx"/>
+                                            <constraint firstAttribute="width" constant="99" id="ggE-Tx-k8X"/>
+                                        </constraints>
+                                        <state key="normal" title="Go to RN View"/>
+                                        <connections>
+                                            <action selector="highScoreButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Eo-Mb-PMP"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write some value for send to RN app" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2o-Xd-m9D">
+                                        <rect key="frame" x="47" y="95" width="280" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="2bm-lj-DbO"/>
+                                            <constraint firstAttribute="width" constant="280" id="JXw-Of-dBB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write some value..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iam-gI-ipP">
+                                        <rect key="frame" x="80.5" y="139.5" width="213" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="213" id="4rS-PP-kQK"/>
+                                            <constraint firstAttribute="height" constant="34" id="Dt8-Vq-5oV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="iOS Native View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dy3-Zw-TLx">
+                                        <rect key="frame" x="102.5" y="32" width="169" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="UYC-8I-kKc"/>
+                                            <constraint firstAttribute="width" constant="169" id="jXG-LX-ONf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="313" id="2vi-YQ-LJH"/>
+                                    <constraint firstItem="iam-gI-ipP" firstAttribute="centerX" secondItem="6Db-ZD-8ap" secondAttribute="centerX" id="DMD-Gf-Qhj"/>
+                                    <constraint firstItem="F2o-Xd-m9D" firstAttribute="centerY" secondItem="6Db-ZD-8ap" secondAttribute="centerY" constant="-51" id="EvX-vS-dEQ"/>
+                                    <constraint firstItem="F2o-Xd-m9D" firstAttribute="centerX" secondItem="6Db-ZD-8ap" secondAttribute="centerX" id="TdP-0x-20P"/>
+                                    <constraint firstItem="dy3-Zw-TLx" firstAttribute="centerX" secondItem="6Db-ZD-8ap" secondAttribute="centerX" id="cMA-nc-H5y"/>
+                                    <constraint firstItem="ptp-GL-m5h" firstAttribute="centerX" secondItem="6Db-ZD-8ap" secondAttribute="centerX" id="hna-18-0ws"/>
+                                    <constraint firstItem="iam-gI-ipP" firstAttribute="centerY" secondItem="6Db-ZD-8ap" secondAttribute="centerY" id="kfN-bS-uUq"/>
+                                    <constraint firstItem="ptp-GL-m5h" firstAttribute="centerY" secondItem="6Db-ZD-8ap" secondAttribute="centerY" constant="51.5" id="rq2-d6-nze"/>
+                                    <constraint firstAttribute="width" constant="374" id="suj-PV-Jxd"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Db-ZD-8ap" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7zq-Mo-Igg"/>
+                            <constraint firstItem="6Db-ZD-8ap" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QN4-LJ-Kxg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="valueForReactNativeApp" destination="iam-gI-ipP" id="ap7-Cp-pIL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

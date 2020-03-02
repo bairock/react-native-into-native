@@ -1,9 +1,5 @@
-//
-//  NativeModule.m
-//  RNTest
-//
-//  Created by Petr Vasilev on 02.03.2020.
-//  Copyright © 2020 Julian Aiup. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
+#import <React/RCTBridgeModule.h>
+ 
+@interface RCT_EXTERN_MODULE(NativeModule, NSObject)
+    RCT_EXTERN_METHOD(closeRNApp)
+@end
