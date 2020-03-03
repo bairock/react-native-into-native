@@ -41,6 +41,7 @@ class ViewController: UIViewController {
             launchOptions: nil
         )
         let vc = UIViewController()
+        rootView.backgroundColor = UIColor(red: 40/255.0, green: 44/255.0, blue: 52/255.0, alpha: 1.0)
         vc.view = rootView
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
