@@ -10,8 +10,8 @@
 		78454C63DFB980D7D92C0FE1 /* Pods_RNTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33C23581DEAC3DAD0E3E895 /* Pods_RNTest.framework */; };
 		9788C592240D3F570097BC93 /* NativeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9788C591240D3F570097BC93 /* NativeModule.swift */; };
 		9788C595240D3FD80097BC93 /* NativeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 9788C594240D3FD80097BC93 /* NativeModule.m */; };
-		9788C5A3240D4BAB0097BC93 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 9788C5A2240D4BAB0097BC93 /* main.jsbundle */; };
 		9788C5A7240D4BEE0097BC93 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 9788C5A6240D4BEE0097BC93 /* assets */; };
+		9788C5A9240E073B0097BC93 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 9788C5A8240E073B0097BC93 /* main.jsbundle */; };
 		C8D8293823EDF33200179778 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8293723EDF33200179778 /* AppDelegate.swift */; };
 		C8D8293A23EDF33200179778 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8293923EDF33200179778 /* SceneDelegate.swift */; };
 		C8D8293C23EDF33200179778 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8293B23EDF33200179778 /* ViewController.swift */; };
@@ -26,8 +26,8 @@
 		9788C591240D3F570097BC93 /* NativeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeModule.swift; sourceTree = "<group>"; };
 		9788C593240D3FD80097BC93 /* RNTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		9788C594240D3FD80097BC93 /* NativeModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeModule.m; sourceTree = "<group>"; };
-		9788C5A2240D4BAB0097BC93 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.jsbundle; path = ../../main.jsbundle; sourceTree = "<group>"; };
 		9788C5A6240D4BEE0097BC93 /* assets */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = assets; sourceTree = SOURCE_ROOT; };
+		9788C5A8240E073B0097BC93 /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = main.jsbundle; sourceTree = SOURCE_ROOT; };
 		C8D8293423EDF33200179778 /* React Native Integration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "React Native Integration.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D8293723EDF33200179778 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8D8293923EDF33200179778 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,8 +72,8 @@
 		C8D8293623EDF33200179778 /* RNTest */ = {
 			isa = PBXGroup;
 			children = (
+				9788C5A8240E073B0097BC93 /* main.jsbundle */,
 				9788C5A6240D4BEE0097BC93 /* assets */,
-				9788C5A2240D4BAB0097BC93 /* main.jsbundle */,
 				C8D8293723EDF33200179778 /* AppDelegate.swift */,
 				C8D8293923EDF33200179778 /* SceneDelegate.swift */,
 				C8D8293B23EDF33200179778 /* ViewController.swift */,
@@ -168,9 +168,9 @@
 			files = (
 				9788C5A7240D4BEE0097BC93 /* assets in Resources */,
 				C8D8294423EDF33400179778 /* LaunchScreen.storyboard in Resources */,
+				9788C5A9240E073B0097BC93 /* main.jsbundle in Resources */,
 				C8D8294123EDF33400179778 /* Assets.xcassets in Resources */,
 				C8D8293F23EDF33200179778 /* Main.storyboard in Resources */,
-				9788C5A3240D4BAB0097BC93 /* main.jsbundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

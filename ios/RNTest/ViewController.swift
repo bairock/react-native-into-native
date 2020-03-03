@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         let jsCodeLocation = Bundle.main.url(forResource: "main", withExtension: "jsbundle")!
         
         // Development JS bundle location url
-        // let jsCodeLocation = URL(string: "http://localhost:8081/index.bundle?platform=ios")
+        // let jsCodeLocation = URL(string: "http://192.168.31.175:8081/index.bundle?platform=ios")
         let textValueForRNApp = valueForReactNativeApp.text
         let mockData:NSDictionary = ["nativeParameter": textValueForRNApp!]
 
