@@ -24,7 +24,7 @@ class MyReactActivity : Activity(), DefaultHardwareBackBtnHandler {
         mReactInstanceManager = ReactInstanceManager.builder()
             .setApplication(application)
             .setCurrentActivity(this)
-            .setBundleAssetName("index.android.bundle") //.setBundleAssetName("index.bundle")
+            .setBundleAssetName("index.android.bundle")
             .setJSMainModulePath("index")
             .addPackage(MainReactPackage())
             .setUseDeveloperSupport(BuildConfig.DEBUG)
