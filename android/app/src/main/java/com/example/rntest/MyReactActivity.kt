@@ -3,6 +3,7 @@ package com.example.rntest
 import android.os.Bundle
 
 import android.app.Activity
+import android.graphics.Color
 import com.facebook.react.common.LifecycleState
 import com.facebook.react.shell.MainReactPackage
 import com.facebook.react.ReactInstanceManager
@@ -15,6 +16,7 @@ class MyReactActivity : Activity(), DefaultHardwareBackBtnHandler {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        getWindow().getDecorView().setBackgroundColor(Color.parseColor("#282c34"));
 
         val value = intent.getStringExtra("value")
 
